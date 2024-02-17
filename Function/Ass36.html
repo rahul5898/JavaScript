@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>36) WAP to reverse a number</p>
+    <script>
+        function reverse(num,callback){
+            if(num>9){
+                var rev = 0;
+                while(num!=0){
+                    let digit = num%10;
+                    rev = rev*10+digit;
+                    num = parseInt(num/10);
+                }
+                document.write("After Reverse : "+rev);
+            }else{
+                callback();
+            }
+        }
+        var num = prompt("Enter number : ")*1;
+        reverse(num,function(){
+            document.write("Invalid Input");
+        });
+    </script>
+</body>
+</html>

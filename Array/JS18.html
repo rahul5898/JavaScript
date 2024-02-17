@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>Q.18) Find largest sum contigeous sub array
+        Given an array Arr[] of N integers. Find the contiguous sub-array(containing at least one number) which has the
+        maximum sum and return its sum.
+
+        Example 1:
+        Input:
+        N = 5
+        Arr[] = {1,2,3,-2,5}
+        Output:
+        9</p>
+    <script>
+        function consecutivesum(arr) {
+            var flag = true;
+            var max = -2147483647;
+            for (let i = 0; i < arr.length; i++) {
+                var sum = 0;
+                for (let j = i; j < arr.length; j++) {
+                    sum = arr[j] + sum;
+                    if (max < sum) {
+                        max = sum;
+                    }
+                }
+
+            }
+            document.write("Maximum Sum : "+max);
+        }
+            var ele = prompt("Enter no. of element") * 1;
+            var arr = [];
+            for (let i = 0; i < ele; i++) {
+                arr[i] = parseInt(prompt("Enter " + (i + 1) + " array element"));
+            }
+            consecutivesum(arr);
+    </script>
+</body>
+
+</html>

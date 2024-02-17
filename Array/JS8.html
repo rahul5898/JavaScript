@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question-8</title>
+</head>
+
+<body>
+    <p>Q.7 Sub array with given sum
+        Given an unsorted array A of size N that contains only non-negative integers, find a continuous sub-array which
+        adds to a given number S.
+
+        Example 1:
+        Input:
+        N = 5, S = 12
+        A[] = {1,2,3,7,5}
+        Output: 2 4
+        Explanation: The sum of elements
+        from 2nd position to 4th position
+        is 12.
+    </p>
+    <script>
+        var element = prompt("Enter no. of element");
+        var arr = [];
+        var sum2 = prompt("Enter the sum of element");
+        for (let i = 0; i < element; i++) {
+            arr[i] = parseInt(prompt("Enter " + (i + 1) + " array element"));
+        }
+        for(let i=0; i<element; i++){
+            let sum = 0;
+            let flag = true;
+            for(let j=i; j<element; j++){
+                sum = sum + arr[j];
+                // document.write(sum+" ");
+                if(sum2==sum){
+                    flag = false;
+                    document.write((i+1)+" "+(j+1));
+                    break;
+                }
+            }
+            if(!flag)
+            break;
+        }
+
+    </script>
+</body>
+
+</html>

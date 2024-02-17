@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pattern-52</title>
+</head>
+
+<body>
+    <p>
+        12345
+        1__4
+        1_3
+        12
+        1
+    </p>
+    <pre>
+<script>
+    var num = prompt("Enter number");
+    for (let i = num; i >= 1; i--) {
+        for (let sp = num; sp > i; sp--) {
+            document.write(" ");
+        }
+        for (let j = 1; j <= i; j++) {
+            if (i == j || j == 1 || i == num)
+                document.write(j);
+            else
+                document.write("_");
+        }
+        document.write("<br>");
+    }
+</script>
+    </pre>
+</body>
+
+</html>

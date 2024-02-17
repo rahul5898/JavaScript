@@ -1,0 +1,45 @@
+<html>
+<pre>
+<script>
+
+    let n = prompt("Enter no.")*1 ;
+    let a = Math.floor(n/2) ;
+    let k = 0 ;
+    if(n%2 !=0){
+        for(let i = 1 ; i<=n;i++){
+        if(i<=a+1)
+            k++;
+        else
+            k--;
+        for(let j =1 ; j<=a+1 ;j++){
+            if(j >= a+2-k ){
+                document.write("*");
+            }
+            else{
+                document.write(" ");
+            }
+        }
+        document.write("<br>") ;
+    }
+    }
+    else{
+    
+        for(let i = 1 ; i<=n;i++){
+            if(i<=a+1)
+                k++;
+            else
+                k--;
+        for(let j =1 ; j<=a+1 ;j++){
+            if(j >= a+2-k ){
+                document.write("*");
+            }
+            else{
+                document.write(" ");
+            }
+        }
+        document.write("<br>") ;
+}
+}
+</script>
+</pre>
+</html>

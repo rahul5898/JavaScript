@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Find the first repeating element in array of integers</p>
+    <script>
+        function firstrepeat(arr){
+            var flag = true;
+            for(let i=0; i<arr.length; i++){
+                
+                for(let j=i+1; j<arr.length; j++){
+                    if(arr[i]==arr[j]){
+                        flag = false;
+                        document.write("First Repeating element : "+arr[i]);
+                        break;
+                    }
+                }
+                if(!flag){
+                    break;
+                }
+            }
+        }
+        var ele = prompt("Enter no. of element")*1;
+        var arr = [];
+        for(let i=0; i<ele; i++){
+            arr[i] = parseInt(prompt("Enter "+(i+1)+" array element"));
+        }
+        firstrepeat(arr);
+    </script>
+</body>
+</html>

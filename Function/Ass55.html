@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>54) WAP to print all the even numbers between two entered numbers</p>
+    <script>
+        function even(num1,num2){
+            for(let i=num1; i<=num2; i++){
+                if(i%2==1){
+                    document.write(i+" ");
+                }
+            }
+        }
+        var num1 = prompt("Enter 1st number")*1;
+        var num2 = prompt("Enter 2nd number ")*1;
+        even(num1,num2);
+    </script>
+</body>
+</html>

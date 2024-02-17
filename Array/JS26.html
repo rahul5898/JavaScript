@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question</title>
+</head>
+<body>
+    <p>Write a Java program to find the largest and smallest element of an array.</p>
+    <script>
+        var element = prompt("Enter no. of element");
+        var arr = [];
+        for(let i=0; i<element; i++){
+            arr[i] = prompt("Enter "+(i+1)+" array element");
+        }
+        var max=-2147483647,min=2147483647;
+        for(let i=0; i<element; i++){
+           
+            if(max<arr[i]){
+                max = arr[i];
+            }
+            if(min>arr[i]){
+                min = arr[i];
+            }
+        }
+        document.write("Maximum value : "+max);
+        document.write("Minimum value : "+min);
+    </script>
+</body>
+</html>

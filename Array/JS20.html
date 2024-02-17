@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Longest consecutive sequence.
+        Given an array of positive integers. Find the length of the longest sub-sequence such that elements in the subsequence are consecutive integers, the consecutive numbers can be in any order.
+         
+        Example 1:
+        Input:
+        N = 7
+        a[] = {2,6,1,9,4,5,3}
+        Output:
+        6
+        Explanation:
+        The consecutive numbers here
+        are 1, 2, 3, 4, 5, 6. These 6 
+        numbers form the longest consecutive
+        subsquence.</p>
+        <script>
+            function consecutive(arr){
+                var count=0;
+                var min=arr[0];
+                for(let i=0; i<arr.length; i++){
+                        if(min>arr[i]){
+                            min = arr[i];
+                        }
+                }
+                document.write("Minimum value : "+min);
+                for(let i=0; i<arr.length; i++){
+                    for(let j=0; j<arr.length; j++){
+                        if(i!=j){
+                            if(min==arr[j]){
+                                count++;
+                            }
+                        }
+                    }
+                    min++;
+                }
+                document.write("Total Consecutive series : "+count);
+                
+            }
+            var ele = prompt("Enter no. of element ");
+            var arr = [];
+            for(let i=0; i<ele; i++){
+                arr[i] = parseInt(prompt("Enter "+(i+1)+" array element "));
+            }
+            consecutive(arr);
+        </script>
+</body>
+</html>

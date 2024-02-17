@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .first-section {
+            width: 100%;
+            height: 100vh;
+            /* border: 1px solid red; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url(pexels-eberhard-grossgasteiger-443446.jpg);
+            background-size: cover;
+
+
+        }
+
+        .main {
+            width: 60%;
+            height: 90%;
+            /* border: 1px solid rgba(255, 255, 255, 0.3); */
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: rgba(113, 24, 221, 0.5);
+            background-image: url(pexels-eberhard-grossgasteiger-443446.jpg);
+            background-size: cover;
+            box-shadow: 4px 4px 4px 4px rgba(255, 255, 255, 0.5);
+
+        }
+
+        .main h1 {
+            font-size: 80px;
+            color: green;
+            margin-top: 0px;
+            margin-bottom: 0px;
+            text-decoration-line: underline;
+        }
+
+        form {
+            width: 100%;
+            height: 80%;
+            /* border: 1px solid black; */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .first {
+            width: 100%;
+            height: 20%;
+            /* border: 1px solid red; */
+            display: flex;
+            align-items: center;
+        }
+
+        .first div,
+        .second div {
+            width: 50%;
+            height: 100%;
+            /* border: 1px solid green; */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        #name,
+        #last {
+            margin-left: 100px;
+            color: white;
+        }
+
+        #fname,
+        #lname {
+            width: 70%;
+            height: 40px;
+            margin-top: 8px;
+            margin-left: 100px;
+            border-radius: 5px;
+            /* border: 2px solid gray; */
+            padding-left: 10px;
+            border: none;
+            background-color: rgba(105, 185, 234, 0.7);
+        }
+
+        #lname,
+        #last {
+            margin-left: 50px !important;
+
+        }
+
+        .second {
+            width: 80%;
+            height: 80%;
+            /* border: 1px solid red; */
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        .second input {
+            width: 90%;
+            height: 40px;
+            /* border: 2px solid gray; */
+            border: none;
+            border-radius: 5px;
+            margin-top: 5px;
+            margin-left: 50px;
+            padding-left: 10px;
+            background-color: rgba(105, 185, 234, 0.7);
+
+        }
+
+        .second label {
+            margin-left: 50px;
+            color: whitesmoke;
+        }
+
+        .second button {
+            width: 150px;
+            height: 50px;
+            border-radius: 25px;
+            border: none;
+            background-color: green;
+            /* border: 1px solid orange; */
+            font-size: 16px;
+            font-weight: bold;
+            
+
+        }
+        .second button:hover{
+            background-color: transparent;
+            color: white;
+            border: 1px solid green;
+        }
+
+        /* hr {
+            width: 700px;
+            height: 2px;
+            background-color: green;
+            border: none;
+
+        } */
+
+        #firstname {
+            margin-left: 100px;
+            margin-top: 5px;
+        }
+        #lastname{
+            margin-left: 50px;
+            margin-top: 5px;
+        }
+
+        .first small {
+            color: red;
+        }
+
+        .second small {
+            color: red;
+            margin-left: 50px;
+            margin-top: 5px;
+        }
+        ::placeholder{
+            color: wheat;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="first-section">
+        <div class="main" data-tilt>
+            <h1>Registration Form</h1>
+            <hr>
+            <form>
+                <div class="first">
+                    <div>
+                        <label for="" id="name">First Name</label>
+                        <input type="text" id="fname" placeholder="First Name" onkeyup="validationfname()">
+                        <small id="firstname"></small>
+                    </div>
+                    <div>
+                        <label for="" id="last">Last Name</label>
+                        <input type="text" id="lname" placeholder="Last Name" onkeyup="validationlname()">
+                        <small id="lastname"></small>
+                    </div>
+                </div>
+                <div class="second">
+                    <label for="">Email Address</label>
+                    <input type="text" id="email" placeholder="Email Address" onkeyup="validationemail()">
+                    <small id="emailaddress"></small>
+                    <br>
+                    <label for="">Physical Address</label>
+                    <input type="text" id="address" placeholder="Physical Address" onkeyup="validationaddress()">
+                    <small id="physicaladdress"></small>
+                    <br>
+                    <label for="">Phone</label>
+                    <input type="text" id="number" placeholder="Phone" onkeyup="validationphone()">
+                    <small id="phonenumber"></small>
+                    <br>
+                    <label for="">Password</label>
+                    <input type="text" id="password" placeholder="Password" onkeyup="validationpassword()">
+                    <small id="passworderror"></small>
+                    <br>
+                    <center>
+                        <button onclick="return validation()" type="submit">Submit</button>
+                        <center>
+                </div>
+            </form>
+        </div>
+        <script>
+            function validationfname() {
+                var status = true;
+                var fname = document.getElementById("fname").value;
+                var fnameerror = document.getElementById("firstname");
+                if (fname.length == 0) {
+                    status = false;
+                    fnameerror.innerHTML = "name is required";
+                } else if (!isNaN(fname)) {
+                    status = false;
+                    fnameerror.innerHTML = "name must be character";
+                } else {
+                    status = true;
+                    fnameerror.innerHTML = "";
+                }
+                return status;
+            }
+            function validationlname() {
+                var status = true;
+                var lname = document.getElementById("lname").value;
+                var lnameerror = document.getElementById("lastname");
+                if (lname.length == 0) {
+                    status = false;
+                    lnameerror.innerHTML = "name is required";
+                } else if (!isNaN(lname)) {
+                    status = false;
+                    lnameerror.innerHTML = "name must be character";
+                } else {
+                    status = true;
+                    lnameerror.innerHTML = "";
+                }
+                return status;
+            }
+            function validationemail() {
+                var status = true;
+                var email = document.getElementById("email").value;
+                var emailError = document.getElementById("emailaddress");
+                if (email.length == 0) {
+                    status = false;
+                    emailError.innerHTML = "Email id is required";
+                }
+                else {
+                    let atTheRateIndex = email.indexOf("@");
+                    if (atTheRateIndex == -1) {
+                        status = false;
+                        emailError.innerHTML = "Invalid email (@ not present)";
+                        return status;
+                    }
+                    let lastIndexOfAtTheRate = email.lastIndexOf("@");
+                    if (atTheRateIndex != lastIndexOfAtTheRate) {
+                        status = false;
+                        emailError.innerHTML = "Invalid email ( 2 @ present)";
+                        return status;
+                    }
+
+                    let stringAfterAtTheRate = email.substring(atTheRateIndex);
+                    let dotIndex = stringAfterAtTheRate.lastIndexOf(".");
+                    if (dotIndex == -1) {
+                        status = false;
+                        emailError.innerHTML = "Invalid email ( . not present)";
+                        return status;
+                    }
+
+                    let domainString = stringAfterAtTheRate.substring(dotIndex);
+                    if (!(domainString == ".in" || domainString == ".com")) {
+                        status = false;
+                        emailError.innerHTML = "Invalid email ( .in or .com not present)";
+                        return status;
+                    }
+
+                    if (email.charAt(0) == '@') {
+                        status = false;
+                        emailError.innerHTML = "Invalid email ( starting with @)";
+                        return status;
+                    }
+
+                    emailError.innerHTML = "";
+                }
+                return status;
+            }
+
+            function validationaddress() {
+                var status = true;
+                var addressobj = document.getElementById("address").value;
+                var addresserror = document.getElementById("physicaladdress");
+                if (addressobj.length == 0) {
+                    status = false;
+                    addresserror.innerHTML = "Address is required";
+                }
+                else {
+                    status = true;
+                    addresserror.innerHTML = "";
+                }
+                return status;
+            }
+            function validationphone() {
+                var phoneobj = document.getElementById("number").value;
+                var phonerror = document.getElementById("phonenumber");
+                status = true;
+                if (isNaN(phoneobj)) {
+                    status = false;
+                    phonerror.innerHTML = "Only number allow";
+                } else if (phoneobj.length != 10) {
+                    status = false;
+                    phonerror.innerHTML = "number must be 10 digit";
+                } else {
+                    status = true;
+                    phonerror.innerHTML = "";
+                }
+                return status;
+            }
+            function validationpassword() {
+                var status = true;
+                var password = document.getElementById("password").value;
+                var passwordError = document.getElementById("passworderror");
+                if (password.length == 0) {
+                    status = false;
+                    passwordError.innerHTML = "password is required";
+                }
+                else if (password.length < 6 || password.length > 10) {
+                    status = false;
+                    passwordError.innerHTML = "password must be between 6 to 10";
+                }
+                else
+                    passwordError.innerHTML = "";
+
+                return status;
+            }
+
+            function validation() {
+                var fnamestatus = validationfname();
+                var lnamestatus = validationlname();
+                var emailstatus = validationemail();
+                var phonestatus = validationphone();
+                var passwordstatus = validationpassword();
+                if (fnamestatus && lnamestatus && emailstatus && phonestatus && passwordstatus)
+                    return true;
+                return false;
+            }
+        </script>
+        <script src="vanilla-tilt.js"></script>
+    </section>
+</body>
+
+</html>

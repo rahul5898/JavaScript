@@ -1,0 +1,21 @@
+<html>
+<pre>
+<script>
+
+    let n = prompt("Enter no.")*1;
+    let ch = 65 ;
+    for(let i=1 ; i<=n ;i++){
+        for(let j=1 ;j <= n*2-1 ;j++){
+            if(j==(n+1-i) || j==(n+i-1) || i==n){
+                document.write(String.fromCharCode(ch)) ;
+            }
+            else{
+                document.write(" ") ;
+            }
+        }
+        ch++;
+        document.write("<br>") ;
+    }
+</script>
+</pre>
+</html>

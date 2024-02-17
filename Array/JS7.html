@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question-7</title>
+</head>
+
+<body>
+    <p>Sort the array of 0s , 1s and 2s.</p>
+    <script>
+        var element = prompt("Enter no. of element");
+        var arr = [];
+        for (let i = 0; i < element; i++) {
+            arr[i] = prompt("Enter " + (i + 1) + " array element");
+        }
+        for (let i = 0; i < element; i++) {
+            for (let j = i + 1; j < element; j++) {
+                if (arr[i] > arr[j]) {
+                    let temp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = temp;
+                }
+            }
+            document.write(arr[i] + " ");
+        }
+    </script>
+</body>
+
+</html>

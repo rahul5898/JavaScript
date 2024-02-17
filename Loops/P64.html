@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pattern-61</title>
+</head>
+
+<body>
+    <p>
+        *
+        *_*
+        *___*
+        *_____*
+        *********
+
+    </p>
+    <pre>
+<script>
+    var num = prompt("Enter number ");
+    for (let i = 1; i < num * 2; i += 2) {
+
+        for (let sp = num * 2; sp > i; sp -= 2) {
+            document.write(" ");
+        }
+        for (let j = 1; j <= i; j++) {
+            if(i==j||i==num*2-1||j==1){
+                document.write("*");
+            }else{
+                document.write("_");
+            }
+        }
+        document.write("<br>");
+    }
+</script>
+    </pre>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        1 <br>
+        123 <br>
+        12345 <br>
+        1234567 <br>
+        123456789 <br>
+    </p>
+    <script>
+        var num = prompt("Enter number ");
+        for(let i=1; i<=num; i++){
+            for(let j=1; j<=i*2-1; j++){
+                document.write(j);
+            }
+            document.write("<br>");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>17) 1 	2	 4	 7	 11	 16 	…… n terms</p>
+    <script>
+        function series(num,message){
+            if(num>0){
+                var s = 1;
+                for(let i=0; i<=num; i++){
+                    s = s+i;
+                    document.write(s+" ");
+                }   
+            }else{
+                message();
+            }
+        }
+        var num = prompt("Enter number ")*1;
+        series(num,function(){
+            document.write("Invalid Input");
+        });
+    </script>
+</body>
+</html>

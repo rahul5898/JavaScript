@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question-39</title>
+</head>
+
+<body>
+    <p>39) WAP to check whether entered number is strong or not</p>
+    <script>
+        var num = parseInt(prompt("Enter number"));
+        var n = num;
+        var sum = 0;
+        while (num != 0) {
+            let digit = num % 10;
+            let fact = 1;
+            for (let i = 1; i <= digit; i++) {
+                fact = fact * i;
+            }
+            sum = sum + fact;
+            num = parseInt(num / 10);
+        }
+        if (n == sum)
+            document.write("Number is strong : " + sum);
+        else
+            document.write("Number is not strong : " + sum);
+    </script>
+</body>
+
+</html>

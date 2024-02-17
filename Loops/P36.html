@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pattern-36</title>
+</head>
+<body>
+    <p>
+        *****
+        ####
+        ***
+        ##
+        *
+
+    </p>
+    <pre>
+<script>
+    var row = prompt("Enter row");
+    for(let i=row; i>=1; i--){
+        for(let j=1; j<=i; j++){
+            if(i%2==1){
+                document.write("*");
+            }else{
+                document.write("#");
+            }
+        }
+        document.write("<br>");
+    }
+</script>
+    </pre>
+</body>
+</html>

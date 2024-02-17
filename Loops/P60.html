@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pattern-60</title>
+</head>
+
+<body>
+    <p>
+        X
+        X X
+        X__X
+        X____X
+        X X X X X
+    </p>
+    <pre>
+<script>
+    var num = prompt("Enter number");
+    for (let i = 1; i <= num; i++) {
+
+        for (let sp = num; sp > i; sp--) {
+            document.write(" ");
+        }
+        for (let j = 1; j <= i; j++) {
+            if (i == j || i == num || j == 1)
+                document.write(" X");
+            else
+                document.write(" _");
+        }
+        document.write("<br>");
+    }
+</script>
+    </pre>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>47) WAP to print tables of all the numbers between two entered numbers</p>
+    <script>
+        function table(num1,num2){
+            for(let i=num1; i<=num2; i++){
+                for(let j=1; j<=10; j++){
+                    document.write((i*j)+" ");
+                }
+                document.write("<br>")
+            }
+        }
+        var num1 = prompt("Enter 1st number")*1;
+        var num2 = prompt("Enter 2nd number")*1;
+        table(num1,num2);
+    </script>
+</body>
+</html>

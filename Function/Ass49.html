@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>49) WAP to find out all the perfect numbers between two entered numbers</p>
+    <script>
+        function perfect(num1,num2){
+            for(let i=num1; i<=num2; i++){
+                var sum =0;
+                for(let j=1; j<i; j++){
+                    if(i%j==0){
+                        sum = sum + j;
+                    }
+                }
+                if(sum==i){
+                    document.write(i+" ");
+                }
+            }
+        }
+        var num1 = prompt("Enter 1st number ")*1;
+        var num2 = prompt("Enter 2nd number ")*1;
+        perfect(num1, num2);
+    </script>
+</body>
+</html>

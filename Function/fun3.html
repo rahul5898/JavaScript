@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function additon(a,b,callback){
+            if(typeof(a)!="number"||typeof(b)!="number"){
+                callback(new Error("Invalid Input!"))
+            }
+            else{
+                var c= a+b;
+                document.write("<br>Additon : "+c)
+                callback(null,c);
+            }
+        }
+        additon(20,'13',function(err,result){
+            err ? document.write(err):result%2 ? document.write("<br>Odd"):document.write("<br>Even");
+        })
+    </script>
+</body>
+</html>

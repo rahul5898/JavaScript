@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question-6</title>
+</head>
+<body>
+    <p>Find occurance of an integer number in array.</p>
+    <script>
+        var element = prompt("Enter no. of element");
+        var arr = [];
+        var num = prompt("Enter no: for occurance");
+        for(let i=0; i<element; i++){
+            arr[i] = prompt("Enter "+(i+1)+" array element");
+        }
+        var count=0;
+        for(let i=0; i<element; i++){
+            if(num===arr[i])
+            count++;
+        }
+        document.write("Total no. of occurance is : "+count);
+
+    </script>
+</body>
+</html>

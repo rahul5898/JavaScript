@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>6) WAP to find out the factors of a number.	 </p>
+    <pre>
+<script>
+    function naturalNumber(number,callback){
+        if(number>0){
+            for(let i=1;i<number; i++){
+            if(number%i==0)
+            document.write("  "+i)
+        }
+        }
+        else{
+            callback();
+        }  
+    }
+    n = prompt("Enter the number  : ")*1;
+    naturalNumber(n,function(){
+        document.write(new Error("Invalid input"))
+    })
+</script>
+</pre>
+</body>
+</html>

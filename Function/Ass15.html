@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>16) …... -6	-3	0	3	6	9	……. n terms</p>
+    <script>
+        function negativepositive(num,message){
+          
+                if(num>0){
+                for(let i=-3*num; i<=num*3; i++){
+                    if(i%3==0){
+                        document.write(i+" ");
+                    }
+                }
+            }
+            else{
+                message();
+            }
+        }
+        var num = prompt("Enter number : ")*1;
+        negativepositive(num,function(){
+            document.write("Invalid Input");
+        });
+    </script>
+</body>
+</html>

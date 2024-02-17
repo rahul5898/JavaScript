@@ -1,0 +1,23 @@
+<html>
+<pre>
+<script>
+
+    let n=prompt("Enter no.")*1 ;
+
+    for(let i = 1 ; i <= n ; i++){
+        let ch = 65 ;
+        for(let j = 1 ; j<=n ;j++ ){
+            if(j>=i){
+            document.write(" "+String.fromCharCode(ch++)) ;
+            }
+            else{
+                document.write(" ") ;
+            }
+        }
+        document.write("<br>") ;
+    }
+</script>
+</pre>
+</html>
+
+

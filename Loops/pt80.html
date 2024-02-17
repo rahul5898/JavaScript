@@ -1,0 +1,30 @@
+<html>
+<pre>
+<script>
+    let n  =prompt("Enter no. ") ;
+
+    for(let i = 1 ; i<=n;i++){
+    
+        for(let j =1 ; j<=n ;j++){
+            if(i<=Math.floor(n/2)+1){
+                if(j>=Math.floor(n/2)+2-i && j<=n/2+i){
+                    document.write("*")
+                }
+                else{
+                    document.write(" ");
+                }
+            }
+            else{
+                if(j>=(i-j)) {
+                    document.write("*")
+                }
+                else{
+                    document.write(" ");
+                }
+            }
+        }
+           
+    }
+</script>
+</pre>
+</html>

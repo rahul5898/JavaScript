@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>14) WAP to print alphabets in uppercase</p>
+    <script>
+        function capitalAlphabate(callback){
+            callback();
+            for(let i=65; i<=90; i++){
+                document.write(String.fromCharCode(i)+" ");
+            }
+        }
+        capitalAlphabate(function(){
+            document.write("<span style='color: red; font-size: 30px; font-weight: bold'>Capital Alphabate : </span><br>");
+        });
+    </script>
+</body>
+</html>

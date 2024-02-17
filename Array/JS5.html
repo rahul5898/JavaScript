@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question-5</title>
+</head>
+<body>
+    <p>Find the kth largest and kth smallest element in array.</p>
+    <script>
+        var element = prompt("Enter no. of element");
+        var arr = [];
+        var lar = prompt("Enter kth largest no : ");
+        var sma = prompt("Enter kth smallest no :");
+        for(let i=0; i<element; i++){
+            arr[i] = prompt("Enter "+(i+1)+" array element");
+        }
+        for(let i=0; i<element; i++){
+            for(let j=i+1; j<element; j++){
+                if(arr[i]>arr[j]){
+                    let temp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = temp;
+                }
+            }
+            document.write(arr[i]+" ");
+        }
+        document.write(lar+"th largest no: "+arr[arr.length-lar]+"<br> "+sma+"th smallest no: "+arr[sma-1]);
+        
+    </script>
+</body>
+</html>

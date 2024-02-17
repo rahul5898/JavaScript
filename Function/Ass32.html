@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>32) A	b	C	d	E	f	G	h	…… n terms </p>
+    <script>
+        function alphabets(num){
+            var a = 65;
+            var b = 97;
+            for(let i=1; i<=num; i++){
+                if(i%2==1){
+                    document.write(String.fromCharCode(a)+" ");
+                }else{
+                    document.write(String.fromCharCode(b)+" ");
+                }
+                a++;
+                b++;
+            } 
+        }
+        var num = prompt("Enter number  ");
+        alphabets(num);
+    </script>
+</body>
+</html>

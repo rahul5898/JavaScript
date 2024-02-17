@@ -1,0 +1,44 @@
+!<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>Find Maximum product contigeous sub array 
+
+        Given an array Arr[] that contains N integers (may be positive, negative or zero). Find the product of the maximum product subarray.
+        Example 1:
+        Input:
+        N = 5
+        Arr[] = {6, -3, -10, 0, 2}
+        Output: 180</p>
+    <script>
+        function consecutivesum(arr) {
+            var flag = true;
+            var max = -2147483647;
+            for (let i = 0; i < arr.length; i++) {
+                var sum = 1;
+                for (let j = i; j < arr.length; j++) {
+                    sum = arr[j] * sum;
+                    if (max < sum) {
+                        max = sum;
+                    }
+                }
+
+            }
+            document.write("Maximum Product : "+max);
+        }
+            var ele = prompt("Enter no. of element") * 1;
+            var arr = [];
+            for (let i = 0; i < ele; i++) {
+                arr[i] = parseInt(prompt("Enter " + (i + 1) + " array element"));
+            }
+            consecutivesum(arr);
+    </script>
+</body>
+
+</html>

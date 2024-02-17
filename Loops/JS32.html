@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>32) A	b	C	d	E	f	G	h	…… n terms </h2>
+    <pre style="font-size: 20px;">
+<script>
+    let n = prompt("Enter the number : ")
+        let small = 97, capital = 65;
+        for(let i=0; i<=n; i++){
+            if(i%2==0)
+            document.write(String.fromCharCode(capital)+" ")
+            else
+            document.write(String.fromCharCode(small)+" ")
+            small++; capital++;
+        }
+    </script>
+    </pre>
+</body>
+</html>

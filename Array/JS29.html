@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>30. Suppose A, B, C are arrays of integers of size M, N, and M + N respectively. The numbers in array A appear in
+        ascending order while the numbers in array B appear in descending order. Write a java progtam to produce third
+        array C by merging arrays A and B in ascending order. . </p>
+        <script>
+            function merge(arr1,arr2){
+                var arr3 = [];
+                for(let i=0; i<arr1.length+arr2.length; i++){
+                    if(i<arr1.length){
+                        arr3[i] = arr1[i];
+                    }else{
+                        arr3[i] = arr[i-arr1.length];
+                    }
+                }
+                document.write("Merge Array : "+arr3);
+               
+            }
+            var ele1 = prompt("Enter no. of 1st array element")*1;
+            var ele2 = prompt("Enter no. of 2nd array element")*1;
+            var arr1 = [];
+            var arr2 = [];
+            for(let i=0; i<ele1; i++){
+                arr1[i] = parseInt(prompt("Enter "+(i+1)+" array element"));
+            }
+            for(let i=0; i<ele2; i++){
+                arr2[i] = parseInt(prompt("Enter "+(i+1)+" array element"));
+            }
+            merge(arr1,arr2);
+        </script>
+</body>
+
+</html>

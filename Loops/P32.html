@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pattern-32</title>
+</head>
+<body>
+    <p>
+        ABCDE
+        ABCD
+        ABC 
+        AB
+        A
+    </p>
+    <script>
+        var row = prompt("Enter row");
+        var alpha = 65;
+        for(let i=5; i>=1; i--){
+            for(let j=1; j<=i; j++){
+                document.write(String.fromCharCode(alpha++));
+            }
+            document.write("<br>")
+        }
+       
+    </script>
+</body>
+</html>

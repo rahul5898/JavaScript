@@ -1,0 +1,58 @@
+<!--Q.21 Longest consecutive sequence.
+Given an array of positive integers. Find the length of the longest sub-sequence such that elements in the subsequence are consecutive integers, the consecutive numbers can be in any order.
+ 
+Example 1:
+Input:
+N = 7
+a[] = {2,6,1,9,4,5,3}
+Output:
+6
+Explanation:
+The consecutive numbers here
+are 1, 2, 3, 4, 5, 6. These 6 
+numbers form the longest consecutive
+subsquence.
+Example 2:
+Input:
+N = 7
+a[] = {1,9,3,10,4,20,2}
+Output:
+4
+Explanation:
+1, 2, 3, 4 is the longest
+consecutive subsequence. -->
+<script>
+    var n=(prompt("Enter size of array: "))*1;
+    var x=new Array(n);
+    var i;
+    for(i=0;i<n;i++){
+        x[i]=(prompt("**Given an array of positive integers**...Enter "+(i+1)+" element of the array: "))*1;
+    }
+    document.write("<br><br>***ARRAY***<br>")
+    for(i=0;i<n;i++){
+      document.write(x[i]+" ");
+    }
+    //sorting of array
+    for(i=0;i<n;i++){
+      for(var j=i+1;j<n;j++){
+        if(x[i]>x[j]){
+          var temp=x[i];
+          x[i]=x[j];
+          x[j]=temp;
+        }
+      }
+    }
+    document.write("<br><br>*** Longest consecutive sequence.***<br>");
+    var max=Number.MIN_VALUE,c=0;
+    for(i=0;i<n;i++){
+      c=1; 
+      for(var j=i+1,s=1;j<n;j++,s++){
+        if(x[i]-x[j]==-s)
+          c++;
+      }
+      if(max<c)
+        max=c;
+         
+    }
+    document.write("OUTPUT: "+max);
+</script>

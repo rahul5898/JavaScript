@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>28. P is one-dimensional array of integers. Write a Java program search for a data VAL from P. If VAL is present
+        in the array then “element found ” otherwise “element not found” should be displayed.</p>
+        <script>
+            function findelement(arr,k){
+                var flag = true;
+                for(let i=0; i<arr.length; i++){
+                    if(k==arr[i]){
+                        document.write("Element Found");
+                        flag = false; 
+                        break;
+                    }
+                }
+                if(flag){
+                    document.write("Element Not Found");
+                }
+            }
+            var ele = prompt("Enter no. of element ")*1;
+            var k = prompt("Enter find element ")*1;
+            var arr = [];
+            for(let i=0; i<arr.length; i++){
+                arr[i] = parseInt(prompt("Enter "+(i+1)+" array element"));
+            }
+            findelement(arr,k);
+        </script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<html>
+<pre>
+<script>
+
+    let n = prompt("Enter No. ")*1 ;
+    for(let i = 1 ; i<=n ; i++){
+        let count = n+1 ;
+    
+    
+        for(let j=1 ; j<= n*2-1 ;j++){
+            if(j<=n)
+                count-- ;
+            else
+                count++ ;
+
+            if(j>=(n+1-i) && j<=n-1+i){
+                if(j>=(n+1-i)){
+                    document.write(count);
+                }
+                else{
+                    document.write(count);
+                }
+            }
+            else{
+                document.write(" ") ;
+            }
+        }
+        document.write("<br>") ;
+    }
+</script>
+</pre>
+</html>

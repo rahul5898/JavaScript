@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D-Mart</title>
+    <link rel="shortcut icon" href="unnamed.jpg">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            position: relative;
+            font-family: sans-serif;
+            width: 100vw;
+            height: 120vh;
+            background-color: antiquewhite;
+
+        }
+    </style>
+</head>
+
+<body>
+    <section class="first-section">
+        <img src="" alt="">
+
+        <script>
+            document.write("<center><img src='unnamed.jpg' width='150px'></center>");
+            document.write("<center><h2 style='background-color: pink'>AVENUE SUPERMART LTD.</h2></center>");
+            document.write("<hr>");
+
+            document.write("<br><p style='text-align: center; font-size: 14px; position: absolute; left:60%; top: 20%;line-spacing: 20px '>Survey No 21, Plot No 112, <br> Electronic City, Konappana Agrahara <br> Begur Hobli, Bangalore South Taluk <br> Bangalore 560100</p>")
+
+            document.write("<br><span style='font-size:14px; position: absolute; left: 300px; top: 20%'><b>CIN :- </b> L51900MH2000PLC12673</span></style>");
+            document.write("<br><span style='font-size:14px; position: absolute; left: 300px; top: 23%'><b>GSTIN:</b> 29AACCA84253H1ZM</span>");
+            document.write("<br><span style='font-size:14px; position: absolute; left: 300px;  top: 26%'><b>FSSAI NO:</b> 15112358964011 </span>");
+
+            var name = prompt("Enter your name");
+            document.write("<br><center><span style='position: absolute; left: 300px; top: 30%;'><b>Customer Name :</b> " + name + "</span></center>");
+
+            var gender = prompt("Enter gender");
+
+            var item1r = 10, item2r = 20, item3r = 30, item4r = 40, item5r = 50, item6r = 60, item7r = 70, item8r = 80, item9r = 90, item10r = 100;
+
+            var item1qty = parseFloat(prompt("Enter 1st item quantity"));
+            var item2qty = parseFloat(prompt("Enter 2nd item quantity"));
+            var item3qty = parseFloat(prompt("Enter 3rd item quantity"));
+            var item4qty = parseFloat(prompt("Enter 4th item quantity"));
+            var item5qty = parseFloat(prompt("Enter 5th item quantity"));
+            var item6qty = parseFloat(prompt("Enter 6th item quantity"));
+            var item7qty = parseFloat(prompt("Enter 7th item quantity"));
+            var item8qty = parseFloat(prompt("Enter 8th item quantity"));
+            var item9qty = parseFloat(prompt("Enter 9th item quantity"));
+            var item10qty = parseFloat(prompt("Enter 10th item quantity"));
+
+            var da = new Date();
+            var date = da.getDate();
+            var month = da.getMonth();
+            var year = da.getFullYear();
+
+            var totalprice1 = item1qty * item1r;
+            var totalprice2 = item2qty * item2r;
+            var totalprice3 = item3qty * item3r;
+            var totalprice4 = item4qty * item4r;
+            var totalprice5 = item5qty * item5r;
+            var totalprice6 = item6qty * item6r;
+            var totalprice7 = item7qty * item7r;
+            var totalprice8 = item8qty * item8r;
+            var totalprice9 = item9qty * item9r;
+            var totalprice10 = item10qty * item10r;
+
+            var acutualprice = totalprice1 + totalprice2 + totalprice3 + totalprice4 + totalprice5 + totalprice6 + totalprice7 + totalprice8 + totalprice9 + totalprice10;
+
+            var dis1 = 0, dis5 = 0, dis10 = 0;
+
+            if (item1qty > 4) {
+                dis1 = totalprice1 - (totalprice1 * 5) / 100;
+            }
+            if (item5qty > 0) {
+                dis5 = totalprice5 - (totalprice5 * 10) / 100;
+            }
+            if (item10qty > 0) {
+                dis10 = totalprice10 - (totalprice10 * 15) / 100;
+            }
+
+            var discountprice = dis1 + totalprice2 + totalprice3 + totalprice4 + dis5 + totalprice6 + totalprice7 + totalprice8 + totalprice9 + dis10;
+
+            if (acutualprice > 10000) {
+                discountprice = discountprice - (discountprice * 15) / 100;
+            } else if (acutualprice > 5000) {
+                discountprice = discountprice - (discountprice * 10) / 100;
+            }
+
+            var gift = "";
+            if (gender == 'male') {
+                gift = 'Ladger Wallet';
+            } else {
+                gift = 'Cadeberry';
+            }
+
+            var actualgst = (acutualprice * 10) / 100;
+            var discountgst = (discountprice * 10) / 100;
+
+
+
+            document.write("<br><span style='position: absolute; left: 300px; top: 35%;'><b>Date:</b> " + date + "/" + month + "/" + year);
+            document.write("<br><br><br>");
+
+            document.write("<div style='border: 2px dotted black; width: 820px; heigth: 10px'></div>");
+            document.write("<br><br>");
+
+            document.write("<b><span style='margin-left: 70px'>Item Name</span><span style='margin-left: 70px'>Quantity</span><span style='margin-left: 70px'>Price</span><span style='margin-left: 70px'>Total Price</span><span style='margin-left: 70px'>After-Discount</span></b>");
+            document.write("<br><br>");
+
+            document.write("<span style='margin-left: 75px'>Item-1 &nbsp;</span><span  style='margin-left: 95px'>" + item1qty + "</span><span  style='margin-left: 105px'>" + item1r + "</span><span  style='margin-left: 105px'>" + totalprice1 + "</span><span  style='margin-left: 105px'>" + dis1 + "</span>");
+            document.write("<br><span style='margin-left: 75px'>Item-2 &nbsp;</span><span  style='margin-left: 95px'>" + item2qty + "</span><span  style='margin-left: 105px'>" + item2r + "</span><span  style='margin-left: 105px'>" + totalprice2 + "</span><span  style='margin-left: 105px'>" + totalprice2 + "</span>");
+            document.write("<br><span style='margin-left: 75px'>Item-3 &nbsp;</span><span  style='margin-left: 95px'>" + item3qty + "</span><span  style='margin-left: 105px'>" + item3r + "</span><span  style='margin-left: 105px'>" + totalprice3 + "</span><span  style='margin-left: 105px'>" + totalprice3 + "</span>");
+            document.write("<br><span style='margin-left: 75px'>Item-4 &nbsp;</span><span  style='margin-left: 95px'>" + item4qty + "</span><span  style='margin-left: 105px'>" + item4r + "</span><span  style='margin-left: 105px'>" + totalprice4 + "</span><span  style='margin-left: 105px'>" + totalprice4 + "</span>");
+            document.write("<br><span style='margin-left: 75px'>Item-5 &nbsp;</span><span  style='margin-left: 95px'>" + item5qty + "</span><span  style='margin-left: 105px'>" + item5r + "</span><span  style='margin-left: 105px'>" + totalprice5 + "</span><span  style='margin-left: 105px'>" + dis5 + "</span>");
+            document.write("<br><span style='margin-left: 75px'>Item-6 &nbsp;</span><span  style='margin-left: 95px'>" + item6qty + "</span><span  style='margin-left: 105px'>" + item6r + "</span><span  style='margin-left: 105px'>" + totalprice6 + "</span><span  style='margin-left: 105px'>" + totalprice6 + "</span>");
+            document.write("<br><span style='margin-left: 75px'>Item-7 &nbsp;</span><span  style='margin-left: 95px'>" + item7qty + "</span><span  style='margin-left: 105px'>" + item7r + "</span><span  style='margin-left: 105px'>" + totalprice7 + "</span><span  style='margin-left: 105px'>" + totalprice7 + "</span>");
+            document.write("<br><span style='margin-left: 75px'>Item-8 &nbsp;</span><span  style='margin-left: 95px'>" + item8qty + "</span><span  style='margin-left: 105px'>" + item8r + "</span><span  style='margin-left: 105px'>" + totalprice8 + "</span><span  style='margin-left: 105px'>" + totalprice8 + "</span>");
+            document.write("<br><span style='margin-left: 75px'>Item-9 &nbsp;</span><span  style='margin-left: 95px'>" + item9qty + "</span><span  style='margin-left: 105px'>" + item9r + "</span><span  style='margin-left: 105px'>" + totalprice9 + "</span><span  style='margin-left: 105px'>" + totalprice9 + "</span>");
+            document.write("<br><span style='margin-left: 75px'>Item-10</span><span style='margin-left: 95px'>" + item10qty + "</span> <span  style='margin-left: 100px'>" + item10r + "</span><span  style='margin-left: 98px'>" + totalprice10 + "</span><span  style='margin-left: 102px'>" + dis10 + "</span>");
+
+            document.write("<br><br>");
+            document.write("<div style='border: 2px dotted black; width: 820px; heigth: 10px'></div>");
+
+            document.write("<br>");
+            document.write("<b><span style='margin-left: 480px'>A.P.</span><span style='margin-left: 120px'>D.P.</span></b>");
+            document.write("<br><br><span style='margin-left: 480px'>" + acutualprice + "</span><span style='margin-left: 120px'>" + discountprice + "</span>")
+            document.write("<br><span style='margin-left: 80px'><b>Gift :</b> " + gift + "</span>");
+            
+            var grossactualprice=0,grossdiscountprice=0;
+            
+            var bag = prompt("Would You want to carry a bag/ y = yes & n = no");
+            if (bag == 'y') {
+                document.write("<br><span style='margin-left: 80px'>Carry bag : Yes</span><span style='margin-left: 300px'>10</span><span style='margin-left: 120px'>10</span>");
+                document.write("<br><span style='margin-left: 80px'>GST (10%)</span><span style='margin-left: 320px'>" + actualgst + "</span><span style='margin-left: 120px'>" + discountgst + "</span>");
+                document.write("<br><br><div style='border: 2px dotted black; width: 820px; heigth: 10px'></div>");
+                grossactualprice = acutualprice+actualgst+10;
+                grossdiscountprice = discountprice+discountgst+10;
+                document.write("<br><span style='margin-left: 480px'>" + grossactualprice + "</span><span style='margin-left: 120px'>" + grossdiscountprice + "</span>");
+
+            }else{    
+                document.write("<br><span style='margin-left: 80px'><b>Carry bag : </b> No</span><span style='margin-left: 300px'>0</span><span style='margin-left: 120px'>0</span>");
+                document.write("<br><span style='margin-left: 80px'><b>GST (10%)</b></span><span style='margin-left: 320px'>" + actualgst + "</span><span style='margin-left: 120px'>" + discountgst + "</span>");
+                document.write("<br><br><div style='border: 2px dotted black; width: 820px; heigth: 10px'></div>");
+                grossactualprice = acutualprice+actualgst;
+                grossdiscountprice = discountprice+discountgst;
+                document.write("<br><span style='margin-left: 480px'>" + grossactualprice + "</span><span style='margin-left: 120px'>" + grossdiscountprice + "</span>");
+            }
+            
+            document.write("<br><br><center><b><span style='background-color: red'>ThankYou To Visit D-Mart</span></b></center>");
+            
+
+        </script>
+        </div>
+    </section>
+</body>
+
+</html>

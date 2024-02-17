@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>41) WAP to find out LCM of a number</h2>
+    <pre style="font-size: 20px;">
+<script>
+    let n1 = prompt("Enter the first number : ");
+    let n2 = prompt("Enter the second number : ");
+    for (let i = 1; i < n1; i++) {
+        let LCM1 = 0;
+        let LCM2 = 0;
+        if (n1 % i == 0)
+            LCM1 = i;
+        for (let j = 1; j < n2; j++) {
+            if (n2 % j == 0) {
+                LCM2 = j;
+                if (LCM1 == LCM2)
+                document.write(LCM1 + " ")
+            }
+        }
+
+    }
+
+</script>
+    </pre>
+</body>
+
+</html>

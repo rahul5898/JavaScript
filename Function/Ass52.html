@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>52) WAP to find out all the Armstrong numbers between two entered numbers</p>
+    <script>
+        function Armstrong(num1,num2){
+            for(let i=num1; i<=num2; i++){
+                var c = i;
+                var count=0;
+                var sum=0,n=c;
+                while(c!=0){
+                    count++;
+                    c = parseInt(c/10);
+                }
+                while(n!=0){
+                    let digit = n%10;
+                    sum = sum + digit**count;
+                    n = parseInt(n/10);
+                }
+                if(i==sum){
+                    document.write(sum+" ");
+                }
+            }
+        }
+        var num1 = prompt("Enter 1st number")*1;
+        var num2 = prompt("Enter 2nd number")*1;
+        Armstrong(num1,num2);
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question-10</title>
+</head>
+
+<body>
+    <p>Q.9 Find the Union and Intersaction of two sorted array.
+        Given two arrays a[] and b[] of size n and m respectively. The task is to find union between these two arrays.
+        Union of the two arrays can be defined as the set containing distinct elements from both the arrays. If there
+        are repetitions, then only one occurrence of element should be printed in the union.
+        Example 1:
+        Input:
+        5 3
+        1 2 3 4 5
+        1 2 3
+        Output:
+        5
+        Explanation:
+        1, 2, 3, 4 and 5 are the
+        elements which comes in the union set
+        of both arrays. So count is 5.</p>
+    <script>
+        var element = prompt("Enter no. of element");
+        var element2 = prompt("Enter no. of 2nd element");
+        var arr = [];
+        var arr1 = [];
+        for (let i = 0; i < element; i++) {
+            arr[i] = parseInt(prompt("Enter " + (i + 1) + " array element"));
+        }
+        for (let i = 0; i < element2; i++) {
+            arr1[i] = parseInt(prompt("Enter " + (i + 1) + " array element"));
+        }
+        for(let i=0; i<element; i++){
+            for(let j=i; j<element2; j++){
+                if(arr[i]==arr[j])
+                document.write(arr[i]+" ");
+            }   
+        }
+    </script>
+</body>
+
+</html>

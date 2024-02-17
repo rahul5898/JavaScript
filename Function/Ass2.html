@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>2) WAP to print N natural number.  </p>
+    <script>
+    function naturalNumber(number,callback){
+        if(number>0){
+            for(let i=1;i<=number; i++){
+            document.write("<br>"+i)
+        }
+        }
+        else{
+            callback();
+        }  
+    }
+    n = prompt("Enter the number  : ")*1;
+    naturalNumber(n,function(){
+        document.write(new Error("Invalid input"))
+    })
+</script>
+</body>
+</html>

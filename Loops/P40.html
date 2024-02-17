@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pattern-40</title>
+</head>
+<body>
+    <p>
+        *
+        **
+        ****
+        *******
+        ***********
+    </p>
+    <pre style="font-size: 16px;">
+<script>
+    var row = prompt("Enter row");
+    var s = 1;
+    for(let i=0; i<=row; i++){
+        s = s+i;
+        for(let j=1; j<=s; j++){
+            document.write("*");
+        }
+        document.write("<br>");
+    }
+</script>
+    </pre>
+</body>
+</html>

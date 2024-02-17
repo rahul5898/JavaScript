@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>50) WAP to find out all the palindrome numbers between two entered numbers</p>
+    <script>
+        function palindrome(num1,num2){
+            for(let i=num1; i<=num2; i++){
+                var rev=0; 
+                var c = i;
+                var n = c;
+                while(c!=0){
+                    let digit = c%10;
+                    rev = rev*10+digit;
+                    c = parseInt(c/10);
+                }
+                if(rev==n){
+                    document.write(rev+" ");
+                }
+            }
+        }
+        var num1 = prompt("Enter 1st number")*1;
+        var num2 = prompt("Enter 2nd number")*1;
+        palindrome(num1,num2);
+    </script>
+</body>
+</html>

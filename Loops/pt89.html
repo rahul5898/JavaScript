@@ -1,0 +1,32 @@
+
+
+<html>
+<pre>
+<script>
+
+    let n = prompt("Enter no. ")*1 ;
+
+    for(let i = 1 ;i<=n*2 ;i++){
+        for(let j  = 1; j <= n*2 ; j++){
+            if(i<=n){
+                if(j<=(n+1-i) || j>=(n+i)){
+                    document.write("*") ;
+                  }
+                else{
+                    document.write(" ") ;
+                }
+            }
+            else{
+                if(j<=(i-n) || j>=(n*2+n+1)-i){
+                    document.write("*") ;
+                }
+                else{
+                    document.write(" ");
+                }
+            }
+        }
+        document.write("<BR>");
+    }
+</script>
+</pre>
+</html>

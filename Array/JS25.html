@@ -1,0 +1,20 @@
+<!-- 25. Write a Java program to swap first and last element of an integer 1-d array. -->
+<script>
+    var n=(prompt("Enter size of array: "))*1;
+    var arr=new Array(n);
+    var i;
+    for(i=0;i<n;i++){
+        arr[i]=(prompt("Enter "+(i+1)+" element of the array: "))*1;
+    }
+    document.write("<br><br>***ARRAY***<br>")
+    for(i=0;i<n;i++){
+        document.write(arr[i]+" ");
+    }
+    arr[0]=arr[0]^arr[n-1];
+    arr[n-1]=arr[0]^arr[n-1];
+    arr[0]=arr[0]^arr[n-1];
+    document.write("<br>swap first and last element of an integer 1-d array<br>");
+    for(i=0;i<n;i++){
+      document.write(arr[i]+" ");
+    }
+</script>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question-45</title>
+</head>
+<body>
+    <p>45) WAP to find out the sum of all the digits of a number</p>
+    <script>
+        var num =  parseInt(prompt("Enter number"));
+        var sum = 0;
+        while(num!=0){
+            let digit = num%10;
+            sum = sum+digit;
+            num = parseInt(num/10);
+        }
+        document.write("Sum of all the digits : "+sum);
+    </script>
+</body>
+</html>

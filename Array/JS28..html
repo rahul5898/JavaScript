@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>29. Suppose a one-dimensional array AR containing integers is arranged in ascending order. Write a java program
+        to search for an integer from AR with the help of Binary search method,</p>
+    <script>
+        function binary(arr, k) {
+
+        
+        for (i = 0; i < n; i++) {
+            document.write(arr[i] + " ");
+        }
+        for (i = 0; i < arr.length; i++) {
+            for (j = 0; j < arr.length - i - 1; j++) {
+                if (arr[j] > arr[j + 1]) {
+                    arr[j] = arr[j] + arr[j + 1];
+                    arr[j + 1] = arr[j] - arr[j + 1];
+                    arr[j] = arr[j] - arr[j + 1];
+                }
+            }
+        }
+       
+        document.write("<br><br>***Sorted array***<br>")
+        for (i = 0; i < n; i++) {
+            document.write(arr[i] + " ");
+        }
+        var flag = false;
+        for (var low = 0, high = arr.length - 1; low <= high;) {
+            var mid = parseInt((low + high) / 2);
+            if (ele == arr[mid]) {
+                flag = true;
+                break;
+            }
+            else if (ele > arr[mid])
+                low = mid + 1;
+            else
+                high = mid - 1;
+        }
+        if (flag)
+            document.write("<br>FOUND<br>");
+        else
+            document.write("<br>NOT FOUND<br>");
+    }
+    var ele = prompt("Enter no. of element") * 1;
+        var arr = [];
+        for (let i = 0; i < arr.length; i++) {
+            arr[i] = parseInt(prompt("Enter " + (i + 1) + " array element"));
+        }
+    var k = (prompt("enter element for search: ")) * 1;
+    </script>
+</body>
+
+</html>

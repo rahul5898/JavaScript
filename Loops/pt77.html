@@ -1,0 +1,36 @@
+<html>
+<pre>
+<script>
+
+    let n = prompt("Enter no. ")*1 ;
+    let k = 0 ;
+
+    if(n%2 !=0){
+        for(let i = 1 ; i <= n ; i++){
+            if(i<=Math.floor(n/2)+1)
+                k++;
+            else
+                k--;
+        for(let j = 1 ; j <= k ; j++){
+            document.write(j);
+        }
+        document.write("<br>") ;
+       }
+    }
+    else{
+        for(let i = 1 ; i <= n-1 ; i++){
+            if(i<=n/2)
+                k++ ;
+            else    
+                k-- ;
+            for(let j = 1 ; j<=k ; j++){
+                document.write(j);
+            }
+            document.write("<br>") ;
+        }
+    }
+    
+
+</script>
+</pre>
+</html>

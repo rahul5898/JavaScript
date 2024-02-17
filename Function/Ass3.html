@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>3) WAP to find out the sum of N natural number. </p>
+    <script>
+    function naturalNumber(number,callback){
+        sum = 0;
+        if(number>0){
+            for(let i=1;i<=number; i++){
+            sum +=i;
+        }
+        document.write("Sum = "+sum)
+        }
+        else{
+            callback();
+        }  
+    }
+    n = prompt("Enter the number  : ")*1;
+    naturalNumber(n,function(){
+        document.write(new Error("Invalid input"))
+    })
+</script>
+</body>
+</html>

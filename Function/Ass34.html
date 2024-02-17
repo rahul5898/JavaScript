@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>34) WAP to check whether entered number is perfect or not</p>
+    <script>
+        function perfect(num){
+            var sum = 0;
+            for(let i=1; i<num; i++){
+                if(num%i==0){
+                    sum = sum+i;
+                }
+            }
+            if(sum==num){
+                document.write("Number is perfect : "+sum);
+            }else{
+                document.write("Number is not perfect : "+sum);
+            }
+        }
+        var num = prompt("Enter number")*1;
+        perfect(num);
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>40) WAP to count no. Of even and odd digits in a number</p>
+    <script>
+        function evenodd(num,callback){
+            if(num>9){
+                var ocount=0;
+                var ecount=0;
+                while(num!=0){
+                    let digit = num%10;
+                    if(digit%2==0){
+                        ecount++;
+                    }else{
+                        ocount++;
+                    }
+                    num  = parseInt(num/10);
+                }
+                document.write("Even Count : "+ecount);
+                document.write("<br>Odd Count : "+ocount);
+            }else{  
+                callback();
+            }
+        }
+        var num = prompt("Enter number ")*1;
+        evenodd(num,function(){
+            document.write("Invalid Input");
+        });
+    </script>
+</body>
+</html>

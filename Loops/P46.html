@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pattern-43</title>
+</head>
+<body>
+    <p>
+        A
+        AB
+        ABC
+        ABCD
+        ABCDE
+    </p>
+    <pre>
+<script>
+    var num = prompt("Enter number");
+    for(let i=1; i<=num; i++){
+        var alpha = 65;
+        for(let sp=num; sp>=i; sp--){
+            document.write(" ");
+        }
+        for(let j=1; j<=i; j++){
+            document.write(String.fromCharCode(alpha++));
+        }
+        document.write("<br>");
+    }
+</script>
+    </pre>
+</body>
+</html>

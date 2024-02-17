@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            width: 100%;
+            border: 1px solid black;
+            text-align: center;
+        }
+        th,td{
+            border: 2px solid;
+            width: 25%;
+        }
+    </style>
+</head>
+<body>
+    <table id="main">
+        
+            <tr>
+                <th>S.NO.</th>
+                <th>Product</th>
+                <th>Price</th>
+                <th>Brand</th>
+            </tr>
+            <tr>
+                <td>1001</td>
+                <td>Laptop</td>
+                <td>50000</td>
+                <td>DELL</td>
+            </tr>
+            <tr>
+                <td>1002</td>
+                <td>Computer</td>
+                <td>20000</td>
+                <td>HP</td>
+            </tr>
+            <tr>
+                <td>1003</td>
+                <td>Phone</td>
+                <td>30000</td>
+                <td>Vivo</td>
+            </tr>
+            <tr>
+                <td>1004</td>
+                <td>Watch</td>
+                <td>5000</td>
+                <td>MI</td>
+            </tr>
+            <tr>
+                <td>1005</td>
+                <td>Airdopes</td>
+                <td>2000</td>
+                <td>BOAT</td>
+            </tr>
+    </table>
+    <br><br>
+    <button onclick="changecolor('red','yellow')">Red-Yellow</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <button onclick="changecolor('green','blue')">Green-Blue</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <button onclick="changecolor('orange','brown')">Orange-Brown</button>
+    <script>
+        function changecolor(evencolor,oddcolor){
+           var obj = document.getElementById("main");
+            for(var index in main.rows){
+                if(index%2){
+                    main.rows[index].style.backgroundColor = oddcolor;
+                }else{
+                    main.rows[index].style.backgroundColor = evencolor;
+                }
+            }
+        }
+    </script>
+</body>
+</html>

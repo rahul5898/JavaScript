@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>34) WAP to check whether entered number is perfect or not</h2>
+    <script>
+        var num = prompt("Enter number");
+        let sum = 0;
+        for(let i=1; i<num; i++){
+            if(num%i==0){
+                sum = sum + i;
+            }
+        }
+        if(sum==num){
+            document.write("Number is Perfect : "+num);
+        }else{
+            document.write("Number is not Perfect : "+num);
+        }
+    </script>
+    <h2>35) WAP to count number of digits</h2>
+    <script>
+        var n = prompt("Enter number ");
+        var count = 0;
+        while(n!=0){
+            n = n/10;
+            count++;
+        }
+        document.write("Number of digit count : "+count);
+    </script>
+</body>
+</html>

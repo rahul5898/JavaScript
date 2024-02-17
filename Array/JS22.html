@@ -1,0 +1,51 @@
+<!--Q.22 Max Sum in configuration
+
+Given an array(0-based indexing), you have to find the max sum of i*A[i] where A[i] is the element at index i in the array.The only operation allowed is to rotate(clock-wise or counter clock-wise) the array any number of times.
+Example 1:
+Input:
+N = 4
+A[] = {8,3,1,2}
+Output: 29
+Explanation: Above the configuration
+possible by rotating elements are
+3 1 2 8 here sum is 3*0+1*1+2*2+8*3 = 29
+1 2 8 3 here sum is 1*0+2*1+8*2+3*3 = 27
+2 8 3 1 here sum is 2*0+8*1+3*2+1*3 = 17
+8 3 1 2 here sum is 8*0+3*1+1*2+2*3 = 11
+Here the max sum is 29 -->
+<script>
+    var n=(prompt("Enter size of array: "))*1;
+    var arr=new Array(n);
+    var i;
+    for(i=0;i<n;i++){
+        arr[i]=(prompt("**Given an array of positive integers**...Enter "+(i+1)+" element of the array: "))*1;
+    }
+    document.write("<br>**Given an array(0-based indexing), you have to find the max sum of i*A[i] where A[i] is the element at index i in the array.The only operation allowed is to rotate(clock-wise or counter clock-wise) the array any number of times.<br><br>Explanation: Above the configuration<br>possible by rotating elements are<br>3 1 2 8 here sum is 3*0+1*1+2*2+8*3 = 29<br>1 2 8 3 here sum is 1*0+2*1+8*2+3*3 = 27<br>2 8 3 1 here sum is 2*0+8*1+3*2+1*3 = 17<br>8 3 1 2 here sum is 8*0+3*1+1*2+2*3 = 11<br>Here the max sum is 29**<br>");
+    document.write("<br><br>***ARRAY***<br>")
+    for(i=0;i<n;i++){
+      document.write(arr[i]+" ");
+    }
+    var max=Number.MIN_VALUE;
+    document.write("<br><br>***Max Sum in configuration***<br>");
+    for(var k=0;k<n;k++){
+      var ans=new Array(n);
+      var j=0;
+      for(i=n-k;i<n;i++){
+        ans[j++]=arr[i];
+      }
+      for(i=0;i<n-k;i++){
+        ans[j++]=arr[i];
+      }
+      for(i=0;i<n;i++){
+        document.write(ans[i]+" ");
+      }
+      document.write("<br>")
+      var res=0;
+      for(var c=0;c<n;c++){
+        res=res+c*ans[c];
+      }
+      if(max<res)
+        max=res;
+    }
+    document.write("OUTPUT: "+max);
+</script>

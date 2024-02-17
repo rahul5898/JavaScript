@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>53) WAP to print all the strong numbers between two entered numbers</p>
+    <script>
+        function strong(num1,num2){
+            for(let i=num1; i<=num2; i++){
+                var c=i;
+                var sum=0;
+                while(c!=0){
+                    let digit = c%10;
+                    let fact = 1;
+                    for(let j=1; j<=digit; j++){
+                        fact = fact*j;
+                    }
+                    sum = sum + fact;
+                    c = parseInt(c/10);
+                }
+                if(sum==i){
+                    document.write(sum+" ");
+                }
+            }
+        }
+        var num1 = prompt("Enter 1st number")*1;
+        var num2 = prompt("Enter 2nd number")*1;
+        strong(num1,num2);
+    </script>
+</body>
+</html>

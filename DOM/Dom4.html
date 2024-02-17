@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #main{
+            width: 40vw;
+            height: 50vh;
+            border: 2px solid red;
+        }
+        .rotatediv{
+            rotate: 40deg;
+            background-color: blue;
+            border: none;
+        }
+        .reversediv{
+            rotate: 0deg;
+            background-color: pink;
+            border: none;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="div">
+        <div id="main" onclick="divrotate()" ondblclick="rotatediv()"></div>
+    </div>
+    <script>
+        function divrotate(){
+            var obj = document.getElementById("main");
+            obj.classList.add("rotatediv");
+        }
+        function rotatediv(){
+            var obj = document.getElementById("main");
+            obj.classList.add("reversediv");
+        }
+    </script>
+
+</body>
+
+</html>

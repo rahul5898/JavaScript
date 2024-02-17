@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>39) WAP to check whether entered number is strong or not</p>
+    <script>
+        function strong(num,callback){
+            if(num>9){
+                var sum=0;
+                var c = num;
+                while(num!=0){
+                    let digit = num%10;
+                    let fact = 1;
+                    for(let i=1; i<=digit; i++){
+                        fact = fact*i;
+                    }
+                    sum = sum+fact;
+                    num = parseInt(num/10);
+                }
+                if(c==sum){
+                    document.write("Number is Strong ");
+                }else{
+                    document.write("Number is not Strong");
+                }
+            }else{
+                callback();
+            }
+        }
+        var num = prompt("Enter number")*1;
+        strong(num,function(){
+            document.write("Invalid Input");
+        });
+        
+    </script>
+</body>
+</html>
